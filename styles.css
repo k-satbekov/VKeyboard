@@ -1,0 +1,356 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    background-color: #fab1a0;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+}
+
+.output-window {
+    position: relative;
+    font-size: 20px;
+    min-width: 100%;
+    height: 35vh;
+    max-height: 1200px;
+    padding: 2%;
+    border: 1px solid #d5d5d5;
+    outline: none;
+    background-color: #dfe6e9;
+}
+
+button {
+    margin: 2px;
+    padding: 2px;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+    background-color: #6c5ce7;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+
+.keyboard {
+    background-color: #ecf0f1;
+    border: 1px solid #d5d5d5;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    width: 835px;
+    height: 55vh;
+    min-height: 350px;
+    max-height: 600px;
+    margin: 0 auto;
+    padding: 0.8%;
+}
+
+.row {
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: row;
+}
+
+.first-row-key {
+    justify-content: flex-start;
+    column-gap: 0.95%;
+}
+
+.row-key {
+    justify-content: space-between;
+    column-gap: 0.55%;
+}
+
+.key {
+    width: 51px;
+    height: 51px;
+    font-size: 24px;
+    text-transform: lowercase;
+}
+
+.key:active, .tab {
+    background: #7e7e7e;
+    color: #111;
+}
+
+.tab {
+    transform: scale(0.96);
+    opacity: 0.9;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    width: 51px;
+    height: 51px;
+}
+
+.key-reg {
+    font-size: 24px;
+    width: 51px;
+    height: 51px;
+}
+
+.arrow {
+    margin-top: 8px;
+}
+
+.arrow:first-child {
+    margin-top: 0;
+}
+
+.key_s {
+    width: 90px;
+}
+
+.key_m {
+    width: 100px;
+}
+
+.key_l {
+    width: 120px;
+}
+
+.key_xl {
+    width: 290px;
+}
+
+.key__small {
+    font-size: 16px;
+    height: 21px;
+}
+
+
+.keys__navigation {
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.caps {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   align-items: center;
+   column-gap: 10%;
+}
+
+.pointer {
+    font-size: 42px;
+    color: white;
+}
+
+.keyboard__navigation_button {
+    font-size: 20px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: auto;
+}
+.close, .close:active{
+    border: rgb(244, 32, 20) solid 1px;
+    background-color: rgb(255, 78, 71);
+    color: rgb(255, 78, 71);
+}
+
+.hide, .hide:active{
+    border: rgb(231, 161, 18) solid 1px;
+    background-color: rgb(255, 190, 0);
+    color: rgb(255, 190, 0);
+}
+
+.wide, .wide:active {
+    border: rgb(20, 182, 20) solid 1px;
+    background-color: rgb(0, 210, 44);
+    color: rgb(0, 210, 44);
+}
+
+.keys__navigation > button:hover{
+     color: rgb(45, 47, 49);
+}  
+
+.title {
+    padding: 2px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+    margin: 0 auto;
+    height: 20px;
+    width: 400px;
+    text-align: center;
+    /*border: #bbb solid 1px;*/
+}
+
+.hidden {
+    /*width: 400px;*/
+    opacity: 0.1;
+    transition: 0.3s all;
+    animation-name: close;
+    animation-duration: 0.4s;
+    visibility: hidden;
+    /*animation-delay: 0.1s;*/
+}
+
+.visible {
+    width: 835.2px;
+    opacity: 1;
+    transition: 0.3s opacity;
+    animation-name: open;
+    animation-duration: 0.2s;
+    visibility: visible;
+}
+
+.springboard__icon-hidden {
+    display: none;
+    opacity: 0;
+}
+
+.springboard__icon-visible {
+   display: block;
+    opacity: 1;
+}
+
+.springboard__icon {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 100px/2);
+    right: calc(50% - 100px/2);
+    display: flex;
+    height: 120px;
+    border-radius: 16px;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    transform: scale(0);
+}
+
+.springboard__icon img {
+    width: 100px;
+}
+
+.fa-volume-up {
+    color: lightgreen;
+}
+
+.fa-volume-off {
+    color: rgb(255, 78, 71);
+}
+
+.event {
+    text-align: center;
+    color: #888;
+    border: none;
+    outline: none;
+}
+
+.logs {
+    display: flex;
+    justify-content: center;
+    column-gap: 0;
+}
+
+.modal {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    display: none;
+    visibility: hidden;
+    width: 100%;
+    max-width: 1440px;
+    height: 40%;
+    animation-name: hide;
+    animation-duration: .8s;
+    opacity: 0;
+    background: transparent;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #777;
+    border-radius: 16px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.full {
+    width: 80%;
+}
+
+.f {
+width: 150px;
+}
+
+.voice_recognition_text {
+    position: relative;
+    display: block;
+    width: 50%;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0.5%;
+    text-align: center;
+    text-overflow: ellipsis;
+    color: #444;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+@keyframes close {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(200px);}
+}
+
+@keyframes hide {
+    0% {visibility: visible; transform: translateY(150%); opacity: 0.2}
+    100% {transform: translateY(145%); opacity: 0;}
+}
+
+@keyframes open {
+    0% {transform: translateY(200px);}
+    100% {transform: translateY(0);}
+}
+
+@media screen and (max-width: 835.2px) {
+    .keyboard {width: 100%}
+    .input {width:100px}
+}
+
+@media screen and (max-width: 440px) {
+    .key, .arrows  {font-size: 18px}
+    .key__small {font-size: 12px }
+    .event {width: 70px;}
+    body {overflow-x: hidden;}
+}
+
+@media screen and (max-width: 360px) {
+    .row-key, .first-row-key {column-gap: 0}
+    .key, .arrows  {font-size: 16px}
+    .key__small {font-size: 11px }
+}

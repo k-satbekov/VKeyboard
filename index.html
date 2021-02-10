@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <link rel="stylesheet" media="screen" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Virtual-Keyboard</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal__content">
+        <span class="fimanager x_shift flaticon-030-shift"></span>
+      </div>
+    </div>
+
+    <textarea
+      placeholder="Enter some text here"
+      class="output-window"
+    ></textarea>
+
+    <div class="logs">
+      <input disabled class="count_signs" type="" name="" />
+      <input disabled class="event_code" type="" name="" />
+      <input disabled class="event_which" type="" name="" />
+      <input disabled class="event_location" type="" name="" />
+    </div>
+
+    <div class="speaking">
+      <input class="voice_recognition_text" type="" />
+    </div>
+
+    <div class="keyboard">
+      <div class="row first-row-key">
+        <div class="keyboard__navigation keys__navigation">
+          <button class="keyboard__navigation_button x close">
+            <span>&#215;</span>
+          </button>
+          <button class="keyboard__navigation_button hide" style="">
+            <span>&#8211;</span>
+          </button>
+          <button class="keyboard__navigation_button wide">
+            <span>+</span>
+          </button>
+        </div>
+        <button class="key-reg key__small">F1</button>
+        <button class="key-reg key__small">F2</button>
+        <button class="key-reg key__small">F3</button>
+        <button class="key-reg key__small">F4</button>
+        <button class="key-reg key__small">F5</button>
+        <button class="key-reg key__small">F6</button>
+        <button class="key-reg key__small">F7</button>
+        <button class="key-reg key__small">F8</button>
+        <button class="key-reg key__small">F9</button>
+        <button class="key-reg key__small">F10</button>
+        <button class="key-reg key__small">F11</button>
+        <button class="key-reg key__small volume fa fas fa-volume-up"></button>
+      </div>
+
+      <div class="row row-2 row-key">
+        <button class="key">§</button>
+        <button class="key">1</button>
+        <button class="key">2</button>
+        <button class="key">3</button>
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+        <button class="key">7</button>
+        <button class="key">8</button>
+        <button class="key">9</button>
+        <button class="key">0</button>
+        <button class="key">-</button>
+        <button class="key">=</button>
+        <button class="key_s x backspace">
+          <i class="material-icons">backspace</i>
+        </button>
+      </div>
+
+      <div class="row row-3 row-key">
+        <button class="key key_s">`</button>
+        <button class="key">q</button>
+        <button class="key">w</button>
+        <button class="key">e</button>
+        <button class="key">r</button>
+        <button class="key">t</button>
+        <button class="key">y</button>
+        <button class="key">u</button>
+        <button class="key">i</button>
+        <button class="key">o</button>
+        <button class="key">p</button>
+        <button class="key">[</button>
+        <button class="key">]</button>
+        <button class="key">\</button>
+      </div>
+
+      <div class="row row-4 row-key">
+        <button class="caps x key_m">
+          <i class="material-icons">keyboard_capslock</i>
+          <span></span>
+          <span class="pointer"> .</span>
+        </button>
+        <button class="key">a</button>
+        <button class="key">s</button>
+        <button class="key">d</button>
+        <button class="key">f</button>
+        <button class="key">g</button>
+        <button class="key">h</button>
+        <button class="key">j</button>
+        <button class="key">k</button>
+        <button class="key">l</button>
+        <button class="key">;</button>
+        <button class="key">'</button>
+        <button class="enter x key_m">
+          <i class="material-icons">keyboard_return</i>
+        </button>
+      </div>
+
+      <div class="row row-5 row-key">
+        <button class="shift x key_l">
+          <i class="material-icons">arrow_upward</i>
+        </button>
+        <button class="key">z</button>
+        <button class="key">x</button>
+        <button class="key">c</button>
+        <button class="key">v</button>
+        <button class="key">b</button>
+        <button class="key">n</button>
+        <button class="key">m</button>
+        <button class="key">,</button>
+        <button class="key">.</button>
+        <button class="key">/</button>
+        <button class="shift x key_l">
+          <i class="material-icons">arrow_upward</i>
+        </button>
+      </div>
+
+      <div class="row row-6 row-key">
+        <button class="key-reg lang">EN</button>
+        <button class="key-reg x">ctrl</button>
+        <button class="key-reg x">alt</button>
+        <button class="key-reg">cmd</button>
+        <button class="key key_xl"></button>
+        <button class="key-reg x y fa fas fa-microphone"></button>
+        <button class="key-reg">alt</button>
+        <button class="key-reg left">&#8592;</button>
+        <div class="arrows">
+          <button class="key-reg x key__small arrow">&#8593;</button>
+          <button class="key-reg x key__small arrow">&#8595;</button>
+        </div>
+        <button class="key-reg x right">&#8594;</button>
+      </div>
+    </div>
+    <button class="key_l springboard__icon springboard__icon-hidden">
+      <img src="keyboard-icon.svg" />
+    </button>
+
+    <audio class="audio_backspace">
+      <source src="audio/backspace-click.mp3" type="audio/ogg; codecs=vorbis" />
+    </audio>
+    <audio class="audio_enter">
+      <source src="audio/enter-click.wav" type="audio/ogg; codecs=vorbis" />
+    </audio>
+    <audio class="audio_caps">
+      <source src="audio/capslock-click.mp3" type="audio/ogg; codecs=vorbis" />
+    </audio>
+    <audio class="audio_shift">
+      <source src="audio/shift-click.wav" type="audio/ogg; codecs=vorbis" />
+    </audio>
+    <audio class="audio_en">
+      <source src="audio/en-click.wav" type="audio/ogg; codecs=vorbis" />
+    </audio>
+    <audio class="audio_ru">
+      <source src="audio/ru-click.mp3" type="audio/ogg; codecs=vorbis" />
+    </audio>
+    <script src="solution.js"></script>
+  </body>
+</html>
